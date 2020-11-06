@@ -1,0 +1,16 @@
+num1 = int (input("first number: "))
+num2 = int (input("second number: "))
+num3 =  input("writte (*,/,+,-): ")
+res = None
+if num3 == "*":
+    res = num1 * num2
+elif num3 == "/":
+    if num2 == 0:
+        print("You cant / 0")
+    else:
+        res = num1 / num2
+elif num3 == "+":
+    res = num1 + num2
+elif num3 == "-":
+    res = num1 - num2
+print("Result is:",res)
