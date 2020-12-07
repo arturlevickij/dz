@@ -1,0 +1,21 @@
+moment = ""
+list_test = []
+while moment != "exit":
+    moment = (input("A or B: "))
+    alpha = "abcdefghiklmnopqrstvxyzABCDEFGHIKLMNOPQRSTVXYZ"
+    if moment.upper() == "A":
+        a = input().split()
+        for j in a:
+            if (j not in list_test) and len(j) > 2:
+                list_test.append(j)
+        list_test.sort()
+        for i in range (0 ,len(list_test)):
+            print(list_test[i])
+    elif moment.upper() == "B":
+        a = input().split()
+        for x in range(len(alpha)):
+            number = 0
+            for i in a:
+                number = number + i.count(alpha[x])
+            if number > 0:
+                print(alpha[x] + "-" + str(number))
